@@ -44,7 +44,7 @@ return {
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
         wrap = false, -- sets vim.opt.wrap
 
-        clipboard = "unnamedplus",
+        -- clipboard = "unnamedplus",
         colorcolumn = "80,120",
         shell = "/bin/zsh",
         fillchars = { vert = " " },
@@ -67,6 +67,10 @@ return {
         ["[b"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
 
         -- mappings seen under group name "Buffer"
+        ["<Leader>lb"] = {
+          function() vim.cmd "LspRestart" end,
+          desc = "LSP Restart",
+        },
         ["<Leader>bd"] = {
           function()
             require("astroui.status.heirline").buffer_picker(
