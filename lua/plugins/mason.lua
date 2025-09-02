@@ -4,15 +4,6 @@
 return {
   -- use mason-tool-installer for automatically installing Mason packages
   {
-    "linux-cultist/venv-selector.nvim",
-    lazy = false,
-    branch = "regexp",
-    opts = {
-      name = { "venv", ".venv", ".env" },
-    },
-    cmd = { "VenvSelect", "VenvSelectCached" },
-  },
-  {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
     -- overrides `require("mason-tool-installer").setup(...)`
     opts = {

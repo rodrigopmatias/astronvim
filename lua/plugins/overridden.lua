@@ -30,7 +30,10 @@ return {
   },
   {
     "linux-cultist/venv-selector.nvim",
-    opts = function(_, opts) opts.name = { ".venv", "venv" } end,
+    opts = {
+      name = { "venv", ".venv", ".env" },
+    },
+    cmd = { "VenvSelect", "VenvSelectCached" },
   },
   {
     "nvim-neotest/neotest-python",
