@@ -30,10 +30,10 @@ return {
   },
   {
     "linux-cultist/venv-selector.nvim",
+    branch = "main",
     opts = {
       name = { "venv", ".venv", ".env" },
     },
-    cmd = { "VenvSelect", "VenvSelectCached" },
   },
   {
     "nvim-neotest/neotest-python",
