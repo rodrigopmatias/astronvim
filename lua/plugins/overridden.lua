@@ -29,13 +29,6 @@ return {
     opts = function(_, opts) opts.no_italic = true end,
   },
   {
-    "linux-cultist/venv-selector.nvim",
-    branch = "main",
-    opts = {
-      name = { "venv", ".venv", ".env" },
-    },
-  },
-  {
     "nvim-neotest/neotest-python",
     opts = function(_, opts)
       opts.dap = { justMyCode = false }
