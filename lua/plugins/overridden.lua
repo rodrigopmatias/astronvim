@@ -43,4 +43,13 @@ return {
       })
     end,
   },
+  {
+    "linux-cultist/venv-selector.nvim",
+    lazy = true,
+    ft = "python",
+    opts = {
+      options = {},
+    },
+    cmd = { "VenvSelect" },
+  },
 }
