@@ -4,6 +4,7 @@
 return {
   "nvim-treesitter/nvim-treesitter",
   opts = {
+    ignore_install = { "jsonc" },
     ensure_installed = {
       "lua",
       "vim",

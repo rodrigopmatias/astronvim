@@ -1,5 +1,26 @@
 return {
   {
+    "williamboman/mason-lspconfig.nvim",
+    optional = true,
+    opts = function(_, opts)
+      opts.ensure_installed = vim.tbl_filter(
+        function(v) return not vim.tbl_contains({ "basedpyright" }, v) end,
+        require("astrocore").list_insert_unique(opts.ensure_installed, { "pyright" })
+      )
+    end,
+  },
+  {
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    optional = true,
+    opts = function(_, opts)
+      opts.ensure_installed = vim.tbl_filter(
+        function(v) return not vim.tbl_contains({ "basedpyright" }, v) end,
+        require("astrocore").list_insert_unique(opts.ensure_installed, { "pyright", "black", "isort", "debugpy" })
+      )
+    end,
+  },
+
+  {
     "Saghen/blink.cmp",
     opts = {
       sources = {
